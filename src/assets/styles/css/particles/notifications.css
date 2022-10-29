@@ -1,0 +1,35 @@
+.app-notifications {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+}
+.app-notifications .notification {
+  width: 300px;
+  min-height: 50px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+}
+.app-notifications .notification p {
+  font-size: 0.9em;
+  font-family: Bold;
+}
+.app-notifications .notification.success {
+  border-color: #379237;
+}
+.app-notifications .notification.success p {
+  color: #379237;
+}
+.app-notifications .notification.error {
+  border-color: #FF6464;
+}
+.app-notifications .notification.error p {
+  color: #FF6464;
+}
+
+/*# sourceMappingURL=notifications.css.map */

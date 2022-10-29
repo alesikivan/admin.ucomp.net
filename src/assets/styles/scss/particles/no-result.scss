@@ -1,0 +1,16 @@
+@import '../utils/mixins.scss';
+
+.no-result-message {
+  @include flex;
+
+  span {
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    user-select: none;
+    border: 1px solid #413f4261;
+    color: #413f4294;
+  }
+  
+  margin: 0 auto;
+}

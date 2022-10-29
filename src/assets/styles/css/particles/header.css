@@ -1,0 +1,122 @@
+.main-header {
+  width: 100%;
+  background-color: #ffffffe8;
+  border-bottom: 1px solid #cccccc59;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+.main-header .cover {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .main-header .cover {
+    min-width: auto;
+  }
+}
+.main-header .cover .logo img {
+  height: auto;
+  max-width: 105px;
+}
+.main-header .cover .navigation-buttons {
+  display: flex;
+  gap: 5px;
+}
+.main-header .cover ul {
+  display: flex;
+  gap: 15px;
+}
+.main-header .cover ul li {
+  list-style-type: none;
+}
+.main-header .cover ul li a {
+  color: #413f42db;
+  user-select: none;
+  text-transform: capitalize;
+  font-family: "Bold";
+}
+.main-header .cover ul li a:hover {
+  color: #0082C7;
+}
+.main-header .cover .special-link {
+  background-color: #0082C7;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Bold";
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  border: none;
+}
+.main-header .cover .special-link:hover {
+  box-shadow: -3px -3px 7px #e4e3e3, 3px 3px 7px #a8aeb4;
+}
+.main-header .cover .menu-button {
+  display: none;
+}
+.main-header .burger-menu {
+  display: none;
+}
+
+@media (max-width: 730px) {
+  .main-header {
+    padding: 8px 40px;
+    flex-direction: column;
+  }
+  .main-header .cover ul {
+    display: none;
+  }
+  .main-header .cover .special-link {
+    display: none;
+  }
+  .main-header .cover .menu-button {
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-header .cover .menu-button img {
+    height: auto;
+    max-width: 40px;
+  }
+  .main-header .burger-menu {
+    display: flex;
+    margin: 10px 0;
+  }
+  .main-header .burger-menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .main-header .burger-menu ul li {
+    list-style-type: none;
+  }
+  .main-header .burger-menu ul li a {
+    color: #413f42db;
+    user-select: none;
+    text-transform: capitalize;
+    font-family: "Bold";
+    font-size: 1.2em;
+  }
+  .main-header .burger-menu ul li a:hover {
+    color: #0082C7;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

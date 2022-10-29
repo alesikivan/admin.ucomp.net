@@ -1,0 +1,319 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+main {
+  .home-info {
+    min-height: calc(100vh - 75px);
+
+    @include flex;
+
+    .cover {
+      display: flex;
+      gap: 20px;
+  
+      .general-info {
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        .description {
+          font-size: 0.9em;
+        }
+  
+        .title {
+          color: $appColor;
+          font-size: 4.2em;
+          font-family: 'Super-Bold';
+          text-transform: uppercase;
+
+          @media (min-width: 1000px) {
+            font-size: 3.2em;
+          }
+        }
+  
+        .about {
+          font-size: 1.2em;
+        }
+  
+        .links {
+          display: flex;
+          gap: 20px;
+  
+          a {
+            min-width: 235px;
+            min-height: 54px;
+            border-radius: 8px;
+            color: $appColor;
+            border: 2px solid #0082c7bd;
+            font-family: 'Bold';
+            transition: 0.5s;
+            font-size: 1.1em;
+
+            @include flex;
+
+            &.active {
+              background-color: $appColor;
+              color: #fff;
+            }
+  
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+  
+      .info-image {
+        img {
+          height: auto;
+          max-width: 600px;
+          border-radius: 15px;
+          box-shadow: 6px 6px 7px #e4e3e3;
+        }
+      }
+    }
+  }
+
+  .home-question {
+    text-align: center;
+    margin: 40px auto;
+    font-family: 'Super-Bold';
+    font-size: 2em;
+    color: $appColor;
+
+    span {
+      color: $appColor;
+      font-family: 'Super-Bold';
+      text-transform: capitalize;
+    }
+  }
+
+  .home-blocks {
+    gap: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .home-block {
+      width: 47%;
+
+      gap: 15px;
+      @include flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+
+      span {
+        font-size: 0.9em;
+        text-align: center;
+
+        a {
+          font-family: Bold;
+          color: $appColor;
+        }
+      }
+
+      img {
+        height: auto;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 1250px) {
+  main {
+    .home-info {  
+      min-height: 0;
+      margin: 40px 0;
+      margin-top:10px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #cccccc52;
+
+      .cover {    
+        .general-info {
+          @include flex-column;
+          text-align: center;
+
+          .description {
+            font-size: 1.1em;
+          }
+
+          .links {
+            width: 100%;
+            margin-top: 15px;
+
+            @include flex;
+
+            a {
+              min-width: 220px;
+              min-height: 48px;
+              font-size: 1em;
+            }
+          }
+        }
+    
+        .info-image {
+          img {
+           display: none;
+          }
+        }
+      }
+    }
+
+    .home-blocks {
+      .home-block {
+        width: 80%;
+  
+        span {
+          font-size: 1.2em;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 1000px) {
+  main {
+    .home-info {  
+      .cover {    
+        .general-info {
+          .description {
+            font-size: 1em;
+          }
+
+          .title {
+            font-size: 2.5em;
+          }
+
+          .about {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+
+
+    .home-blocks {
+      .home-block {
+        width: 85%;
+  
+        span {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  main {
+    .home-info {  
+      .cover {    
+        .general-info {
+          .description {
+            font-size: 0.8em;
+          }
+
+          .title {
+            font-size: 2em;
+          }
+
+          .about {
+            font-size: 0.9em;
+          }
+
+          .links {
+            a {
+              min-width: 200px;
+              min-height: 48px;
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+
+
+    .home-question{
+      font-size: 1.5em;
+    }
+
+    .home-blocks {
+      .home-block {
+        width: 85%;
+  
+        span {
+          font-size: 0.9em;
+        }
+  
+        img {
+          height: auto;
+          max-width: 70px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  main {
+    .home-info {  
+      .cover {    
+        .general-info {
+          .description {
+            font-size: 0.8em;
+          }
+
+          .title {
+            font-size: 1.8em;
+          }
+
+          .links {
+            width: 100%;
+            margin-top: 15px;
+
+            @include flex;
+            // flex-wrap: wrap;
+
+            a {
+              min-height: 42px;
+              min-width: auto;
+              width: 48%;
+              font-size: 0.85em;
+            }
+
+          }
+        }
+      }
+    }
+
+
+    .home-question{
+      font-size: 1.3em;
+    }
+
+    .home-blocks {
+      .home-block {
+        width: 90%;
+  
+        span {
+          font-size: 0.85em;
+        }
+  
+        img {
+          max-width: 60px;
+        }
+      }
+    }
+  }
+}

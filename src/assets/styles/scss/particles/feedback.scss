@@ -1,0 +1,52 @@
+@import '../utils/mixins.scss';
+@import '../utils/variables.scss';
+
+.feedback-block {
+  margin-top: 70px;
+  @include flex-column;
+  gap: 18px;
+
+  img {
+    height: auto;
+    max-width: 100px;
+  }
+
+  .title {
+    font-family: 'Bold';
+    font-size: 2.5em;
+    color: #413f42b8;
+  }
+
+  .message {
+    max-width: 350px;
+    text-align: center;
+  }
+
+  button {
+    background-color: $appColor;
+    color: #fff;
+    padding: 7px 10px;
+    border: none;
+    font-family: 'Bold';
+    font-size: 0.9em;
+    border-radius: 5px;
+    transition: .3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  } 
+}
+
+
+
+@media (max-width: 450px) {
+  .feedback-block {
+    margin-top: 40px;
+    gap: 10px;
+  
+    img {
+      max-width: 80px;
+    }
+  }
+}

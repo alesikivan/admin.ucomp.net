@@ -1,0 +1,61 @@
+.login-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.login-page .preview {
+  font-size: 1em;
+  max-width: 500px;
+  text-align: center;
+  display: block;
+}
+.login-page .login-form {
+  min-width: 420px;
+  border: 1px solid #cccccc59;
+  border-radius: 4px;
+  opacity: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.login-page .login-form button, .login-page .login-form textarea, .login-page .login-form input {
+  border: none;
+  background: none;
+  font-size: 1em;
+}
+.login-page .login-form input {
+  padding: 10px;
+}
+.login-page .login-form input:first-child {
+  border-bottom: 1px solid #cccccc59;
+}
+.login-page .login-form textarea {
+  padding: 0 10px;
+  padding-top: 10px;
+}
+.login-page .login-form button {
+  border-top: 1px solid #cccccc59;
+  padding: 10px 0;
+  font-family: "Bold";
+  color: #413f42a3;
+  cursor: not-allowed;
+}
+.login-page .login-form button.active {
+  color: #0082C7;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.login-page .login-form button.active:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+  .login-page .login-form {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

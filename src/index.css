@@ -1,0 +1,121 @@
+@import './assets/styles/scss/utils/fonts.scss';
+@import 'bootstrap/dist/css/bootstrap.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Regular', Arial;
+  color: #413f42db;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.application {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  max-width: 1200px !important;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  margin-top: 61px; /* Header height */
+  padding: 0 40px;
+  padding-top: 20px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  flex: 1 0 auto;
+}
+
+.app-container main {
+  width: 100%;
+}
+
+.main-footer, .main-header {
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s all;
+  user-select: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+input, button, textarea {
+  outline: none;
+  font-family: 'Regular', Arial;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.preloaders {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  font-size: 0.9em;
+}
+
+.form-group {
+  width: 400px;
+}
+
+.special {
+  width: 100%;
+}
+
+button.special {
+  max-width: 400px;
+}
+
+.column {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+table b {
+  font-family: 'Bold';
+}
+
+table tbody tr:last-child th,
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (min-width: 1200px) {
+  .app-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

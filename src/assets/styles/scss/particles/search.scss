@@ -1,0 +1,78 @@
+@import '../utils/variables.scss';
+
+.page-search {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto;
+  max-width: 350px;
+  min-height: 40px;
+  overflow: hidden;
+  padding: 0 4px;
+  min-width: 360px;
+
+  display: flex;
+  gap: 5px;
+
+  input {
+    width: 100%;
+    border: none;
+    padding-left: 35px;
+    background-image: url('../../../images/particals/search/search.svg');
+    background-repeat: no-repeat;
+    background-size: 19px;
+    background-position: left;
+    font-family: 'Bold';
+    background-position-x: 6px;
+    font-size: 1em;
+
+    &::placeholder {
+      color: #666666d6;
+    }
+  }
+
+  .clear {
+    align-self: center;
+    min-width: 8px;
+    
+    span {
+      display: none;
+      cursor: pointer;
+      user-select: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  button {
+    width: 70px;
+    user-select: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1em;
+    font-family: 'Bold';
+    transition: 0.4s;
+
+    &:hover {
+      color: $appColor;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .page-search {
+    min-width: 260px;
+
+    input {
+      &::placeholder {
+        font-size: 0.9em;
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
+}

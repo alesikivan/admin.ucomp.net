@@ -1,0 +1,53 @@
+main .error_message {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .error_message span {
+  font-family: "Super-Bold";
+  color: #0082C7;
+  font-size: 6em;
+}
+main .error_message p {
+  font-size: 2.7em;
+}
+main .link-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .link-block a {
+  border-radius: 30px 0 30px 0;
+  margin-top: 20px;
+  padding: 10px 40px;
+  font-family: "Bold";
+  background-color: #0082C7;
+  font-size: 1.2em;
+  color: #fff;
+  transition: 0.4s;
+}
+main .link-block a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+  main .error_message {
+    text-align: center;
+    margin-top: 70px;
+  }
+  main .error_message span {
+    font-size: 4em;
+  }
+  main .error_message p {
+    font-size: 1.5em;
+  }
+  main .link-block a {
+    font-size: 0.8em;
+  }
+}
+
+/*# sourceMappingURL=not-found.css.map */

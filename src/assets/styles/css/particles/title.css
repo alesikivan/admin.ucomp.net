@@ -1,0 +1,16 @@
+.page-title {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Super-Bold";
+  color: #0082C7;
+  font-size: 2em;
+}
+
+@media (max-width: 730px) {
+  .page-title {
+    font-size: 1.5em;
+  }
+}
+
+/*# sourceMappingURL=title.css.map */

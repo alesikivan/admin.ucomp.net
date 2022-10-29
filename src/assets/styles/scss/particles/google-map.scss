@@ -1,0 +1,9 @@
+@import '../utils/mixins.scss';
+
+.google-map {
+  height: 230px;
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -3px -3px 7px #e4e3e363, 3px 3px 7px #a8aeb49c;
+}

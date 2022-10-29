@@ -1,0 +1,9 @@
+.google-map {
+  height: 230px;
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -3px -3px 7px rgba(228, 227, 227, 0.3882352941), 3px 3px 7px rgba(168, 174, 180, 0.6117647059);
+}
+
+/*# sourceMappingURL=google-map.css.map */

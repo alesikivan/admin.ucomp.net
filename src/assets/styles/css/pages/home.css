@@ -1,0 +1,231 @@
+main .home-info {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .home-info .cover {
+  display: flex;
+  gap: 20px;
+}
+main .home-info .cover .general-info {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .home-info .cover .general-info .description {
+  font-size: 0.9em;
+}
+main .home-info .cover .general-info .title {
+  color: #0082C7;
+  font-size: 4.2em;
+  font-family: "Super-Bold";
+  text-transform: uppercase;
+}
+@media (min-width: 1000px) {
+  main .home-info .cover .general-info .title {
+    font-size: 3.2em;
+  }
+}
+main .home-info .cover .general-info .about {
+  font-size: 1.2em;
+}
+main .home-info .cover .general-info .links {
+  display: flex;
+  gap: 20px;
+}
+main .home-info .cover .general-info .links a {
+  min-width: 235px;
+  min-height: 54px;
+  border-radius: 8px;
+  color: #0082C7;
+  border: 2px solid #0082c7bd;
+  font-family: "Bold";
+  transition: 0.5s;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .home-info .cover .general-info .links a.active {
+  background-color: #0082C7;
+  color: #fff;
+}
+main .home-info .cover .general-info .links a:hover {
+  opacity: 0.7;
+}
+main .home-info .cover .info-image img {
+  height: auto;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 7px #e4e3e3;
+}
+main .home-question {
+  text-align: center;
+  margin: 40px auto;
+  font-family: "Super-Bold";
+  font-size: 2em;
+  color: #0082C7;
+}
+main .home-question span {
+  color: #0082C7;
+  font-family: "Super-Bold";
+  text-transform: capitalize;
+}
+main .home-blocks {
+  gap: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .home-blocks .home-block {
+  width: 47%;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+main .home-blocks .home-block span {
+  font-size: 0.9em;
+  text-align: center;
+}
+main .home-blocks .home-block span a {
+  font-family: Bold;
+  color: #0082C7;
+}
+main .home-blocks .home-block img {
+  height: auto;
+  max-width: 100px;
+}
+
+@media (max-width: 1250px) {
+  main .home-info {
+    min-height: 0;
+    margin: 40px 0;
+    margin-top: 10px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #cccccc52;
+  }
+  main .home-info .cover .general-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  main .home-info .cover .general-info .description {
+    font-size: 1.1em;
+  }
+  main .home-info .cover .general-info .links {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  main .home-info .cover .general-info .links a {
+    min-width: 220px;
+    min-height: 48px;
+    font-size: 1em;
+  }
+  main .home-info .cover .info-image img {
+    display: none;
+  }
+  main .home-blocks .home-block {
+    width: 80%;
+  }
+  main .home-blocks .home-block span {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+@media (max-width: 1000px) {
+  main .home-info .cover .general-info .description {
+    font-size: 1em;
+  }
+  main .home-info .cover .general-info .title {
+    font-size: 2.5em;
+  }
+  main .home-info .cover .general-info .about {
+    font-size: 1.2em;
+  }
+  main .home-blocks .home-block {
+    width: 85%;
+  }
+  main .home-blocks .home-block span {
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 700px) {
+  main .home-info .cover .general-info .description {
+    font-size: 0.8em;
+  }
+  main .home-info .cover .general-info .title {
+    font-size: 2em;
+  }
+  main .home-info .cover .general-info .about {
+    font-size: 0.9em;
+  }
+  main .home-info .cover .general-info .links a {
+    min-width: 200px;
+    min-height: 48px;
+    font-size: 1em;
+  }
+  main .home-question {
+    font-size: 1.5em;
+  }
+  main .home-blocks .home-block {
+    width: 85%;
+  }
+  main .home-blocks .home-block span {
+    font-size: 0.9em;
+  }
+  main .home-blocks .home-block img {
+    height: auto;
+    max-width: 70px;
+  }
+}
+@media (max-width: 500px) {
+  main .home-info .cover .general-info .description {
+    font-size: 0.8em;
+  }
+  main .home-info .cover .general-info .title {
+    font-size: 1.8em;
+  }
+  main .home-info .cover .general-info .links {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  main .home-info .cover .general-info .links a {
+    min-height: 42px;
+    min-width: auto;
+    width: 48%;
+    font-size: 0.85em;
+  }
+  main .home-question {
+    font-size: 1.3em;
+  }
+  main .home-blocks .home-block {
+    width: 90%;
+  }
+  main .home-blocks .home-block span {
+    font-size: 0.85em;
+  }
+  main .home-blocks .home-block img {
+    max-width: 60px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,74 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.login-page {
+  @include flex-column;
+  gap: 25px;
+
+  .preview {
+    font-size: 1em;
+    max-width: 500px;
+    text-align: center;
+
+    display: block;
+  }
+
+  .login-form {
+    min-width: 420px;
+    border: 1px solid $opacityLineColor;
+    border-radius: 4px;
+    opacity: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    button, textarea, input {
+      border: none;
+      background: none;
+      font-size: 1em;
+    }
+
+    input {
+      padding: 10px;
+
+      &:first-child {
+        border-bottom: 1px solid $opacityLineColor;
+      }
+    }
+
+    textarea {
+      padding: 0 10px;
+      padding-top: 10px;
+    }
+
+    button {
+      border-top: 1px solid $opacityLineColor;
+      padding: 10px 0;
+      font-family: 'Bold';
+      color: #413f42a3;
+      cursor: not-allowed;
+
+      &.active {
+        color: $appColor;
+        transition: 0.4s;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 500px) {
+
+  .login-page {
+    .login-form {
+      min-width: auto;
+      width: 100%;
+    }
+  }
+}

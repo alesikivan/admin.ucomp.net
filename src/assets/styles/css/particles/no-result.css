@@ -1,0 +1,17 @@
+.no-result-message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.no-result-message span {
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  user-select: none;
+  border: 1px solid rgba(65, 63, 66, 0.3803921569);
+  color: rgba(65, 63, 66, 0.5803921569);
+}
+
+/*# sourceMappingURL=no-result.css.map */

@@ -1,0 +1,40 @@
+.app-notifications {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+
+  .notification {
+    width: 300px;
+    min-height: 50px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+
+    p {
+      font-size: 0.9em;
+      font-family: Bold;
+    }
+
+    &.success {
+      border-color: #379237;
+
+      p {
+        color: #379237;
+      }
+    }
+
+    &.error {
+      border-color: #FF6464;
+
+      p {
+        color: #FF6464;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+@mixin box-shadow {
+  box-shadow: $blockShahow;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  @include flex;
+  flex-direction: column;
+}
