@@ -22,22 +22,40 @@ function MemberUpdate() {
     isModifiedImage: false
   })
 
-  const [positions, setPositions] = useState('')
-
-  function changePositions(event) {
+  function createPosition(event) {
     const text = event.target.value
-    setPositions(text)
 
-    matchPositions(text)
+    // Pressed "Enter" button & text should not ebe empty
+    if (event.which === 13 && text.trim()) {
+      event.preventDefault()
+      
+      setMember({ ...member, positions: [...member.positions, text] })
+
+      event.target.value = ''
+    }    
+
+    // Pressed "Delete" button & text should be empty
+    if (event.which === 8 && !text.trim()) {
+      event.preventDefault()
+      
+      setMember({ ...member, positions: member.positions.slice(0, -1) })
+      event.target.value = ''
+    }
+
+    // Pressed "Enter" button & text should be empty
+    if (event.which === 13 && !text.trim()) {
+      event.preventDefault()
+      return false
+    }
   }
 
-  function matchPositions(text) {
-    const positions = text
-      .split('/')
-      .map(text => text.trim())
-      .filter(text => text !== '')
+  function removePosition(position) {
+    const { positions } = member
 
-    setMember({ ...member, positions })
+    setMember({ 
+      ...member, 
+      positions: positions.filter(text => text !== position)
+    })
   }
 
   useEffect(() => {
@@ -45,9 +63,6 @@ function MemberUpdate() {
       .then(res => {
         const member = res.data
         setMember(prev => ({ ...prev, ...member  }))
-
-        setPositions(member.positions.join(' / '))
-
       })
       .catch(err => console.log(err))
       .finally(() => {
@@ -101,7 +116,7 @@ function MemberUpdate() {
               <textarea 
                 onChange={event => setMember({ ...member, description: event.target.value })}
                 value={member.description}
-                class="form-control" 
+                className="form-control" 
                 id="description" 
                 placeholder='Enter description'
                 rows="4">
@@ -109,22 +124,22 @@ function MemberUpdate() {
           </div>
 
           <div className='form-group'>
-            <label>Member positions separeted by "/" (slash)</label>
+            <label>Member positions</label>
 
-            <textarea 
-              onChange={e => changePositions(e)}
-              value={positions}
-              class="form-control" 
-              placeholder='Set some positions separeted by "/" (slash)'
-              rows="4">
-            </textarea>
-            <br />
-
-            <ul className="list-group">
+            <ul className='content-list'>
               {
                 member.positions.map((position, i) => 
-                  <li key={i} className="list-group-item">{ position }</li>)
+                  <li key={i} className="content-list-item">
+                    { position } 
+                    <span onClick={() => removePosition(position)} className='remove-content-list-item'>&times;</span>
+                  </li>)
               }
+              <li>
+                <input 
+                  placeholder='Press enter to add'
+                  onKeyDown={e => createPosition(e)}
+                  type="text" />
+              </li>
             </ul>
 
           </div>

@@ -16,22 +16,40 @@ function PublicationCreate() {
     authors: []
   })
 
-  const [authors, setAuthors] = useState('')
-
-  function changeAuthors(event) {
+  function createAuthor(event) {
     const text = event.target.value
-    setAuthors(text)
 
-    matchAuthors(text)
+    // Pressed "Enter" button & text should not ebe empty
+    if (event.which === 13 && text.trim()) {
+      event.preventDefault()
+      
+      setPublication({ ...publication, authors: [...publication.authors, text] })
+
+      event.target.value = ''
+    }    
+
+    // Pressed "Delete" button & text should be empty
+    if (event.which === 8 && !text.trim()) {
+      event.preventDefault()
+      
+      setPublication({ ...publication, authors: publication.authors.slice(0, -1) })
+      event.target.value = ''
+    }
+
+    // Pressed "Enter" button & text should be empty
+    if (event.which === 13 && !text.trim()) {
+      event.preventDefault()
+      return false
+    }
   }
 
-  function matchAuthors(text) {
-    const authors = text
-      .split('/')
-      .map(text => text.trim())
-      .filter(text => text !== '')
+  function removeAuthor(position) {
+    const { authors } = publication
 
-    setPublication({ ...publication, authors })
+    setPublication({ 
+      ...publication, 
+      authors: authors.filter(text => text !== position)
+    })
   }
 
   function create(event) {
@@ -84,22 +102,22 @@ function PublicationCreate() {
       </div>
 
       <div className='form-group'>
-        <label htmlFor='file'>Publication authors separeted by "/" (slash)</label>
+        <label htmlFor='file'>Publication authors</label>
 
-        <input 
-          value={authors}
-          className='form-control' 
-          onChange={e => changeAuthors(e)}
-          type="text" 
-          placeholder='Set some authors separeted by "/" (slash)' />
-          
-        <br />
-
-        <ul className="list-group">
+        <ul className='content-list'>
           {
             publication.authors.map((position, i) => 
-              <li key={i} className="list-group-item">{ position }</li>)
+              <li key={i} className="content-list-item">
+                { position } 
+                <span onClick={() => removeAuthor(position)} className='remove-content-list-item'>&times;</span>
+              </li>)
           }
+          <li>
+            <input 
+              placeholder='Press enter to add'
+              onKeyDown={e => createAuthor(e)}
+              type="text" />
+          </li>
         </ul>
       </div>
       

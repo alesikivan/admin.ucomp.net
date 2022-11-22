@@ -119,3 +119,35 @@ table tbody tr:last-child td {
     padding-right: 0;
   }
 }
+
+.content-list {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 7px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.content-list .content-list-item {
+  padding: 2px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-list input {
+  border: none;
+}
+
+.content-list .content-list-item .remove-content-list-item{
+  cursor: pointer;
+  user-select: none;
+}
